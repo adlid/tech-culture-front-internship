@@ -2,15 +2,18 @@
 // Дан массив с числами nums.Мы определяем текущую сумму массива
 // как runningSum[i] = sum(nums[0]…nums[i]).
 // Вернуть сумму элементов массива nums.
+let emp = [];
+
 function runningSum(nums) {
     let count = 0;
     for (let i = 0; i < nums.length; i++) {
-        count += nums[i];
-        console.log(count)
+        emp.push(count += nums[i])
     }
 }
-runningSum([4, 5, 8])
 let arr = [1, 2, 3, 4, 5];
+runningSum(arr);
+console.log(emp)
+    // with method array
 let count = 0;
 let newarr = arr.map((elem, i) => {
     return count += elem
